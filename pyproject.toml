@@ -20,7 +20,7 @@ black = "^23.1.0"
 isort = "^5.12.0"
 
 [tool.poetry.scripts]
-build = "renderer:build(True)"
+build = "renderer:build"
 dev = "renderer:livereload"
 
 [tool.black]

@@ -6,7 +6,11 @@ from typing import Any
 from pathlib import Path
 
 
-def build(minify: bool = False) -> None:
+def build() -> None:
+    _build(True)
+
+
+def _build(minify: bool = False) -> None:
     from renderer._core import ResumeRenderer
 
     renderer = ResumeRenderer(minify=minify)
@@ -36,15 +40,15 @@ def copy_assets(filenames: str | None = None) -> None:
 
 
 def livereload() -> None:
-    build()
+    _build()
     try:
         import livereload
     except ModuleNotFoundError:
         print("\x1b[31mError\x1b[0m: livereload is not installed.", file=sys.stderr)
         return
     server = livereload.Server()
-    server.watch("templates/**/*.html", func=build)
-    server.watch("data/**/*.toml", func=build)
+    server.watch("templates/**/*.html", func=_build)
+    server.watch("data/**/*.toml", func=_build)
     server.watch("public/**/*", func=copy_assets)
     tw_proc = subprocess.Popen(
         [
