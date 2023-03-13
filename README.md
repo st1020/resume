@@ -1,25 +1,25 @@
-# Resume of Frost Ming
+# Resume of Yishi Gao
 
-Requires: [PDM](https://pdm.fming.dev) and Python >= 3.10
+Requires: Python >= 3.11
 
 ## Usage
 
 Install dependencies
 
-```
-pdm install
+```shell
+poetry install
 ```
 
 Build static files
 
-```
-pdm run build
+```shel
+poetry run build
 ```
 
 Run development server
 
-```
-pdm dev
+```shell
+poetry dev
 ```
 
 Data files are in `data/` directory, and templates are in `templates/` directory.

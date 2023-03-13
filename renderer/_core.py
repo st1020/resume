@@ -1,13 +1,13 @@
 import os
-from functools import cached_property, lru_cache
+import tomllib
 from pathlib import Path
+from functools import lru_cache, cached_property
 
 import marko
 import requests
-import yaml
-from jinja2.environment import Environment
-from jinja2.loaders import FileSystemLoader
 from markupsafe import Markup
+from jinja2.loaders import FileSystemLoader
+from jinja2.environment import Environment
 
 
 def format_size(size: int) -> str:
@@ -70,8 +70,8 @@ class ResumeRenderer:
     def _render_locale(self, locale: Path, template_name: str) -> None:
         print(f"\x1b[32mBuilding\x1b[0m /{locale.name}/index.html ...")
 
-        with open(locale / "main.yaml", encoding="utf-8") as f:
-            data = yaml.safe_load(f)
+        with open(locale / "main.toml", "rb") as f:
+            data = tomllib.load(f)
 
         template = self.jinja_env.get_template(template_name)
         output_html = self.output_dir / locale.name / "index.html"

@@ -1,16 +1,13 @@
 from __future__ import annotations
 
-import subprocess
 import sys
-from pathlib import Path
+import subprocess
 from typing import Any
+from pathlib import Path
 
 
-def build(filename: Any = None, minify: bool = False) -> None:
+def build(minify: bool = False) -> None:
     from renderer._core import ResumeRenderer
-
-    if isinstance(filename, bool):
-        minify = filename
 
     renderer = ResumeRenderer(minify=minify)
     renderer.render()
@@ -47,7 +44,7 @@ def livereload() -> None:
         return
     server = livereload.Server()
     server.watch("templates/**/*.html", func=build)
-    server.watch("data/**/*.yaml", func=build)
+    server.watch("data/**/*.toml", func=build)
     server.watch("public/**/*", func=copy_assets)
     tw_proc = subprocess.Popen(
         [

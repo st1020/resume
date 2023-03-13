@@ -5,26 +5,29 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 * * 0"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pdm-project/setup-pdm@v3
+
+      - name: Install poetry
+        run: pipx install poetry
+        shell: bash
+      - uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
-          cache: true
-      - name: Install dependencies
-        run: pdm install
+          python-version: "3.11"
+          architecture: "x64"
+          cache: "poetry"
+      - run: poetry install
+        shell: bash
 
       - name: Run build
         run: |
-          pdm run build
+          poetry run build
 
-      - uses: actions/upload-pages-artifact@v1.0.7
+      - uses: actions/upload-pages-artifact@v1
         with:
           path: output/
 
