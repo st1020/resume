@@ -2,10 +2,29 @@ title = "个人简历"
 name = "高依石 (Yishi Gao)"
 bio = "致力于成为全栈开发工程师"
 description = "正在为了成为全栈开发者而学习中，爱好并擅长 Python 和 Rust 开发；具有 Web 开发、项目开发构建部署全流程管理经验；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目。"
+introduction = """
+1、精通 Python 语言，熟悉 Python 语言底层运行逻辑，熟练使用 Pyhton 语言编写大型应用程序
+
+2、熟练使用 FastAPI、Flask 等 Web 应用框架，熟悉 XPath 语法和爬虫技术
+
+3、爱好并熟悉掌握 Rust 语言，理解 Rust 所有权机制，有 Rust 程序开发经验
+
+4、理解编程语言编译运行过程，有简单动态语言字节码编译器和虚拟机开发经验
+
+5、有一定的前端基础，了解 HTML、CSS、JS/TS 语言，Vue、React 等框架，熟悉 HTTP 和 WebSocket 协议，有 Web 前端开发经验
+
+6、熟悉 Linux/Unix 基本操作，有 Linux 服务器项目开发部署经验
+
+7、熟练使用 Git 等工具，熟练使用 GitHub Actions workflow 等工具进行 CI/CD
+
+8、了解 Java 语言和 Spring Boot、JPA、MyBatis 等常用框架
+"""
 location = "浙江杭州，中国"
 phone = "(+86)15167799855"
 email = "me@gaoyishi.com"
+birthday = "2002年10月20日"
 stack = ["Python", "Rust", "FastAPI", "Flask", "TS/JS", "Vue", "React", "Java"]
+summary = "思考深入、办事认真、诚实守信；学习能力强、适应力强；对计算机编程技术有兴趣，热爱分享；在校学习期间，收获了良好的沟通能力、优秀的组织能力。"
 
 [t]
 projects = "项目经历"
@@ -15,15 +34,18 @@ open_source = "开源项目"
 stack = "技术栈"
 honors = "其他荣誉"
 education = "教育经历"
+introduction = "个人技能"
+summary = "自我评价"
+awards = "获奖情况"
 
 
 [[links]]
 icon = "fa-solid fa-globe"
-url = "https://gaoyishi.com"
+url = "https://resume.gaoyishi.com"
 
 [[links]]
 icon = "fa-brands fa-weixin"
-url = "stone_1020"
+url = "stone_2357"
 
 [[links]]
 icon = "fa-brands fa-github"
@@ -74,9 +96,9 @@ subtitle = "Python 异步多后端机器人框架"
 repository = "https://github.com/st1020/alicebot"
 # stack = ["Python", "AsyncIO", "aithttp", "pydantic"]
 description = """
-* 使用 Python 异步语法编写聊天机器人框架
+* 使用 Python 协程编写的聊天机器人框架，拥有较高的执行效率
 * 支持多种聊天协议适配，并提供了一套易于学习的插件语法用于用户编写插件实现聊天机器人具体功能
-* 具有完全的类型注解支持、相对完善的文档和配套工具
+* 为了更好的用户开发体验，具有完全的类型注解支持、相对完善的文档和配套工具
 * 支持插件和配置文件热重载
 * 多个协议适配器使用了 WebSocket 网络协议，使用了 aiohttp 库进行网络请求， pydantic 库进行数据验证
 """
@@ -97,10 +119,10 @@ description = """
 [[projects]]
 name = "Sophia-doc"
 subtitle = "Python 模块 API 文档生成器"
-repository = "https://github.com/st1020/lucia-lang"
+repository = "https://github.com/st1020/sophia-doc"
 description = """
-* 分析 Python 模块的 Docstring 并生成 Markdown 文档
-* 基于 [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) 和 [PEP 484 – Type Hints](https://peps.python.org/pep-0484/)
+* 分析 Python 模块的 Docstring 并自动生成 Markdown 格式的 API 文档
+* 基于 [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) 和 [PEP 484 – Type Hints](https://peps.python.org/pep-0484/) 标准
 * 支持分析 Pyhton 函数或类的的类型注解
 * 用于 AliceBot 项目的 API 文档生成: https://docs.alicebot.dev/api/
 """
@@ -111,11 +133,11 @@ subtitle = "简单的前后端分离电商系统"
 repository = "https://github.com/st1020/shutter-mall"
 description = """
 * 为了学习编写的简单的前后端分离电商系统
-* 使用 JWT 进行权限认证
+* 使用 JWT 进行作为用户登陆解决方案
 * 使用前端路由
 * 支持基本的权限管理
-* 支持基本的购物篮，订单管理，用户管理，商品管理等功能
-* **后端** 使用 Java 语言 SpringBoot 框架编写
+* 支持基本的购物篮，商品下单，订单管理，用户管理，商品管理等功能
+* **后端** 为了方便整合项目中使用的技术，使用 Java 语言 Spring Boot 框架编写，使用 MySQL 作为数据库
 * **前端（用户端）** 使用 Vue 框架和 Vant 组件库编写
 * **前端（管理端）** 使用 Vue 框架和 Naive UI 组件库编写
 """
@@ -131,4 +153,30 @@ start = 2020
 end = 2024
 degree = "本科在读"
 major = "计算机科学与技术"
-content = "绩点: 4.06/5.0, 浙江省政府奖学金获得者, 计算机协会部长, ACM 校赛一等奖"
+content = """绩点: 4.06/5.0, 专业前 5%
+
+通过 CET-6
+
+温州大学计算机协会部长
+"""
+
+
+[[awards]]
+name = "浙江省大学生物理竞赛三等奖"
+date = "2020年12月"
+
+[[awards]]
+name = "校级三好学生"
+date = "2021年11月"
+
+[[awards]]
+name = "ACM 校赛一等奖"
+date = "2022年03月"
+
+[[awards]]
+name = "浙江省政府奖学金"
+date = "2022年11月"
+
+[[awards]]
+name = "校级三好学生"
+date = "2022年11月"

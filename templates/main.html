@@ -25,6 +25,12 @@
           {% endfor %}
         </div>
       </section>
+      <section id="introduction">
+        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.introduction }}</h2>
+        <div class="p-4 mb-2 rounded border-solid border border-gray-300">
+          <div>{{ introduction|markdown }}</div>
+        </div>
+      </section>
       <section id="projects">
         <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.projects }}</h2>
         {% for project in projects %}
@@ -45,22 +51,12 @@
         </div>
         {% endfor %}
       </section> -->
-      <section id="education">
-        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.education }}</h2>
-        {% for item in education %}
-        <div class="p-4 mb-2 rounded border-solid border border-gray-300">
-          <h2 class="text-xl font-bold">{{ item.school }}</h2>
-          <h3 class="mb-2">{{ item.start }} - {{ item.end }}</h3>
-          <p>{{ item.major }} / {{ item.degree }}</p>
-          <div>{{ item.content }}</div>
-        </div>
-        {% endfor %}
-      </section>
     </div>
     <div class="basis-1/4">
       <section id="contact" class="mb-6">
         <div class="font-light text-xl mb-4">
           <p><i class="fa-solid fa-location-dot"></i> {{ location }}</p>
+          <p><i class="fa-solid fa-calendar-days"></i> {{ birthday }}</p>
           <p><a class="hover:text-cyan-700 hover:underline" href="mailto:{{email}}" target="_blank"><i class="fa-solid fa-envelope"></i> {{ email }}</a></p>
           {% if phone %}<p><i class="fa-solid fa-phone"></i> {{ phone }}</p>{% endif %}
         </div>
@@ -86,6 +82,27 @@
           <progress max="100" aria-labelledby="progress-id" value="{{ skill.value }}" class="w-full h-1.5 block"></progress>
         </div>
         {% endfor %}
+      </section>
+      <section id="education" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.education }}</h2>
+        {% for item in education %}
+        <h2 class="text-xl font-bold">{{ item.school }}</h2>
+        <h3 class="mb-2">{{ item.start }} - {{ item.end }}</h3>
+        <p>{{ item.major }} / {{ item.degree }}</p>
+        <div>{{ item.content|markdown }}</div>
+        {% endfor %}
+      </section>
+      <section id="awards" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.awards }}</h2>
+        {% for award in awards %}
+        <div class="mb-2">
+          <p>{{award.date}} {{ award.name }}</p>
+        </div>
+        {% endfor %}
+      </section>
+      <section id="summary" class="mb-6">
+        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.summary }}</h2>
+        <div>{{ summary|markdown }}</div>
       </section>
       <!-- <section id="open-source" class="mb-6">
         <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.open_source }}</h2>
