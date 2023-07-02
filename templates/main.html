@@ -31,6 +31,16 @@
           <div>{{ introduction|markdown }}</div>
         </div>
       </section>
+      <section id="work">
+        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.work_experience }}</h2>
+        {% for job in work_experience %}
+        <div class="p-4 mb-2 rounded border-solid border border-gray-300">
+          <h2 class="text-xl font-bold">{{ job.position }}, {{ job.company }}</h2>
+          <h3 class="mb-2">{{ job.start }} - {{ job.end }}</h3>
+          <div>{{ job.content|markdown }}</div>
+        </div>
+        {% endfor %}
+      </section>
       <section id="projects">
         <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.projects }}</h2>
         {% for project in projects %}
@@ -41,16 +51,6 @@
         </div>
         {% endfor %}
       </section>
-      <!-- <section id="work">
-        <h2 class="uppercase font-bold tracking-widest text-cyan-700 text-xl mb-4">{{ t.work_experience }}</h2>
-        {% for job in work_experience %}
-        <div class="p-4 mb-2 rounded border-solid border border-gray-300">
-          <h2 class="text-xl font-bold">{{ job.position }}, {{ job.company }}</h2>
-          <h3 class="mb-2">{{ job.start }} - {{ job.end }}</h3>
-          <div>{{ job.content|markdown }}</div>
-        </div>
-        {% endfor %}
-      </section> -->
     </div>
     <div class="basis-1/4">
       <section id="contact" class="mb-6">

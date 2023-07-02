@@ -76,18 +76,14 @@ name = "Java"
 value = 50
 
 
-# [[work_experience]]
-# company = "公司"
-# position = "职位"
-# start = "2024.9"
-# end = "2025.9"
-# content = """
-# 主要负责了 xxx 项目。
-
-# * 项目1: xxx。
-# * 项目2: xxx。
-# * 项目2: xxx。
-# """
+[[work_experience]]
+company = "火线安全"
+position = "Python 开发工程师（实习）"
+start = "2023.6"
+end = "至今"
+content = """
+主要负责 DongTai IAST 项目后端开发。
+"""
 
 
 [[projects]]
@@ -125,21 +121,6 @@ description = """
 * 基于 [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) 和 [PEP 484 – Type Hints](https://peps.python.org/pep-0484/) 标准
 * 支持分析 Pyhton 函数或类的的类型注解
 * 用于 AliceBot 项目的 API 文档生成: https://docs.alicebot.dev/api/
-"""
-
-[[projects]]
-name = "Shutter-mall"
-subtitle = "简单的前后端分离电商系统"
-repository = "https://github.com/st1020/shutter-mall"
-description = """
-* 为了学习编写的简单的前后端分离电商系统
-* 使用 JWT 进行作为用户登陆解决方案
-* 使用前端路由
-* 支持基本的权限管理
-* 支持基本的购物篮，商品下单，订单管理，用户管理，商品管理等功能
-* **后端** 为了方便整合项目中使用的技术，使用 Java 语言 Spring Boot 框架编写，使用 MySQL 作为数据库
-* **前端（用户端）** 使用 Vue 框架和 Vant 组件库编写
-* **前端（管理端）** 使用 Vue 框架和 Naive UI 组件库编写
 """
 
 # [[open_source]]

@@ -1,13 +1,13 @@
 import os
-import tomllib
+from functools import cached_property, lru_cache
 from pathlib import Path
-from functools import lru_cache, cached_property
 
 import marko
 import requests
-from markupsafe import Markup
-from jinja2.loaders import FileSystemLoader
+import tomllib
 from jinja2.environment import Environment
+from jinja2.loaders import FileSystemLoader
+from markupsafe import Markup
 
 
 def format_size(size: int) -> str:

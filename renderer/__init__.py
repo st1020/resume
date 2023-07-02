@@ -1,8 +1,5 @@
-from __future__ import annotations
-
-import sys
 import subprocess
-from typing import Any
+import sys
 from pathlib import Path
 
 
