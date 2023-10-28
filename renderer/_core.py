@@ -1,10 +1,10 @@
 import os
+import tomllib
 from functools import cached_property, lru_cache
 from pathlib import Path
 
 import marko
 import requests
-import tomllib
 from jinja2.environment import Environment
 from jinja2.loaders import FileSystemLoader
 from markupsafe import Markup
@@ -14,10 +14,9 @@ def format_size(size: int) -> str:
     """Get the human-readable file size."""
     if size < 1024:
         return f"{size} B"
-    elif size < 1024**2:
+    if size < 1024**2:
         return f"{size / 1024:.2f} KB"
-    else:
-        return f"{size / 1024 ** 2:.2f} MB"
+    return f"{size / 1024 ** 2:.2f} MB"
 
 
 @lru_cache(None)
@@ -44,7 +43,7 @@ class ResumeRenderer:
     @cached_property
     def jinja_env(self) -> Environment:
         env = Environment(loader=FileSystemLoader(self.root / "templates"))
-        env.filters["markdown"] = self.render_markdown
+        env.filters["markdown"] = self.render_markdown  # type: ignore
         env.globals["github_stars"] = get_github_stars
         return env
 
@@ -70,7 +69,7 @@ class ResumeRenderer:
     def _render_locale(self, locale: Path, template_name: str) -> None:
         print(f"\x1b[32mBuilding\x1b[0m /{locale.name}/index.html ...")
 
-        with open(locale / "main.toml", "rb") as f:
+        with (locale / "main.toml").open("rb") as f:
             data = tomllib.load(f)
 
         template = self.jinja_env.get_template(template_name)
@@ -78,7 +77,7 @@ class ResumeRenderer:
         output_html.parent.mkdir(exist_ok=True, parents=True)
         locales = sorted(p.name for p in self.data.iterdir() if p.name != locale.name)
 
-        with open(output_html, "w", encoding="utf-8") as f:
+        with output_html.open("w", encoding="utf-8") as f:
             f.write(template.render(data, other_locales=locales, lang=locale.name))
 
         # Get the file size of output html

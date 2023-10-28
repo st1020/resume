@@ -22,7 +22,8 @@ def _build(minify: bool = False) -> None:
                 "public/css/style.css",
                 "-o",
                 "output/css/style.css",
-            ]
+            ],
+            check=True,
         )
 
 
