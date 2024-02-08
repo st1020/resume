@@ -1,30 +1,46 @@
 # Resume of Yishi Gao
 
-Requires: Python >= 3.11
-
 ## Usage
 
-Install dependencies
+Requires:
 
-```shell
-poetry install
-```
+- zola >= 0.17.0
 
 Build static files
 
-```shel
-poetry run build
+```shell
+zola build
 ```
 
 Run development server
 
 ```shell
-poetry dev
+zola serve
 ```
 
-Data files are in `data/` directory, and templates are in `templates/` directory.
+Data files are in `content/` directory, and templates are in `templates/` directory.
+
+## Development
+
+Install dependencies
+
+```shell
+pnpm install
+```
+
+Build css files
+
+```shell
+pnpm run build
+```
+
+Run development server
+
+```shell
+pnpm run dev
+```
 
 ## Tech
 
-- [Jinja2](https://pypi.org/project/jinja2)
+- [Zola](https://www.getzola.org)
 - [TailwindCSS](https://tailwindcss.com)

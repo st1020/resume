@@ -1,0 +1,236 @@
+title = "Resume"
+name = "Yishi Gao"
+bio = "Working hard to becoming a full-stack development engineer."
+description = """I am currently studying to become a full-stack developer, with a passion and proficiency in Python and Rust development.
+I have experience in both web front-end and back-end as well as app development.
+Interested in compiler theory, compiler development, virtual machines, linters, and related areas.
+I maintain a strong emphasis on good code style and prioritize code quality.
+I have a keen interest in open-source projects and actively develop and maintain multiple open-source projects."""
+introduction = """
+1\\. Proficient in the Python language, familiar with the underlying logic of Python, and skilled in using web application frameworks such as FastAPI and Django. Have experience in writing large-scale applications in Python.
+
+2\\. Enthusiastic about and proficient in Rust programming language. Understand the ownership mechanism in Rust and have experience in low-level Rust development.
+
+3\\. Understand the compilation and execution process of programming languages. Have experience in developing simple dynamic language bytecode compilers and virtual machines.
+
+4\\. Possess a solid foundation in frontend development, with knowledge of HTML, CSS, JS/TS languages, and familiarity with frameworks such as Vue and React. Proficient in HTTP and WebSocket protocols, with experience in web frontend development.
+
+5\\. Skilled in using Dart language and Flutter framework for APP development.
+
+6\\. Familiar with the Java language and commonly used frameworks like Spring Boot, JPA, and MyBatis.
+
+7\\. Understand basic operations in Linux/Unix and Docker/Kubernetes, with foundational experience in project deployment.
+
+8\\. Proficient in using tools such as Git and skilled in using GitHub Actions workflows and other tools for CI/CD.
+"""
+location = "Hangzhou, China"
+phone = "(+86)15167799855"
+email = "me@gaoyishi.com"
+birthday = "2002-10-20"
+stack = [
+    "Python",
+    "Rust",
+    "FastAPI",
+    "Django",
+    "Flutter",
+    "TS/JS",
+    "Vue",
+    "React",
+    "Java",
+    "Go",
+]
+summary = """Thoughtful and detail-oriented;
+approaches tasks with diligence.
+Exhibits strong learning capabilities and adaptability.
+Passionate about computer programming technology and enjoys sharing knowledge.
+Has cultivated excellent communication and organizational skills through academic studies and internship experiences."""
+
+[t]
+projects = "Open Source Projects"
+work_experience = "Work Experience"
+skills = "Skills"
+open_source = "OSS Projects"
+stack = "Stack"
+honors = "Honors"
+education = "Education"
+introduction = "Introduction"
+summary = "Summary"
+awards = "Awards"
+
+
+[[links]]
+icon = "fa-solid fa-globe"
+url = "https://resume.gaoyishi.com"
+
+[[links]]
+icon = "fa-brands fa-weixin"
+url = "stone_2357"
+
+[[links]]
+icon = "fa-brands fa-github"
+url = "https://github.com/st1020"
+
+[[skills]]
+name = "Python"
+value = 90
+
+[[skills]]
+name = "Rust"
+value = 90
+
+[[skills]]
+name = "Dart/Flutter"
+value = 80
+
+[[skills]]
+name = "Web Development"
+value = 75
+
+[[skills]]
+name = "JS/TS"
+value = 70
+
+[[skills]]
+name = "Java"
+value = 65
+
+[[skills]]
+name = "Linux"
+value = 65
+
+[[skills]]
+name = "Go"
+value = 40
+
+[[work_experience]]
+company = "Networkbench Tingyun - Application Security Department"
+position = "Backend Development Engineer (Intern)"
+start = "2023.10"
+end = "Now"
+content = """
+Independently responsible for the development and maintenance of the DongTai IAST backend.
+Involved in backend development for the Tingyun ASPM project.
+
+Implemented compliance requirements for system login and two-factor combined authentication.
+
+Designed and implemented a container health check system with visualization and alert solutions.
+
+Collaborated on the development of various custom requirements from clients.
+
+Successfully addressed multiple issues raised by clients, providing assistance to technical support in resolving post-sales/pre-sales problems.
+"""
+
+[[work_experience]]
+company = "HuoXian Security (HXSecurity)"
+position = "Python Development Engineer (Intern)"
+start = "2023.6"
+end = "2323.10"
+content = """
+Participated in the development and maintenance of the DongTai IAST backend project.
+
+Using the Django technology stack.
+
+Conducted code standardization and refactoring of the backend code, integrating continuous integration (CI).
+
+Addressed the differences between the commercial and open-source versions by providing and implementing a more readable dynamic patch solution.
+
+Implemented the new version of the user permission system.
+
+Rewrote the PDF/HTML/Word report export module based on Pandoc and Typst to achieve a more consistent export style and better maintainability.
+
+Implemented a new lightweight vulnerability information search feature.
+"""
+
+
+[[projects]]
+name = "AliceBot"
+subtitle = "Python asynchronous multi-backend chatbot framework"
+repository = "https://github.com/AliceBotProject/alicebot"
+# stack = ["Python", "AsyncIO", "aithttp", "pydantic"]
+description = """
+* A chatbot framework using Python coroutines, exhibiting high execution efficiency.
+* Supports adaptation to multiple chat protocols and provides a user-friendly plugin syntax for users to implement specific chatbot functionalities.
+* Complete type annotation support, relatively comprehensive documentation, and accompanying tools. Also supports hot reloading of plugins and configuration files.
+* Multiple protocol adapters utilize the WebSocket network protocol, employing the aiohttp library for network requests, and the pydantic library for data validation.
+"""
+
+[[projects]]
+name = "Lucia-lang"
+subtitle = "A programming language inspired by Lua and Python"
+repository = "https://github.com/st1020/lucia-lang"
+description = """
+* A lightweight, embeddable, dynamically-typed programming language inspired by Lua and Python.
+* Supports procedural, object-oriented, functional, and data-driven programming paradigms.
+* Incorporates modern language features such as error handling, first-class functions, anonymous functions, closures, iterators, operator overloading, safe navigation operators, and tail call optimization.
+* Primarily designed for embedding in Rust programs for scripting purposes, and allows mutual calls with Rust.
+* Implemented in Rust, featuring a complete set of lexer, parser, semantic analysier, code generator, and a stack-based virtual machine with garbage collection support. Includes foundational type-checking support.
+"""
+
+[[projects]]
+name = "Sophia-doc"
+subtitle = "A python package to automatically generate API documents for Python modules"
+repository = "https://github.com/st1020/sophia-doc"
+description = """
+* Analyzes Docstrings of Python modules and automatically generates API documentation in Markdown format.
+* Based on [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) and [PEP 484 – Type Hints](https://peps.python.org/pep-0484/).
+* Supports the analysis of type annotations for Python functions or classes.
+* Utilized for API documentation generation in the AliceBot project: https://docs.alicebot.dev/api/.
+"""
+
+[[projects]]
+name = "zhlint-rs"
+subtitle = "A linter/formatter tool for Chinese text content."
+repository = "https://github.com/zhlint-project/zhlint-rs"
+description = """
+* Analyzes the text parts in Markdown, automatically correcting spacing, punctuation, and full-width/half-width characters normalization issues in Chinese and English mixed typesetting.
+* A Rust port of zhlint, utilizing formatting rules and test cases from the zhlint project. However, there are some differences in behavior between the two.
+"""
+
+[[projects]]
+name = "Kita"
+subtitle = "A clean, elegant and simple blog theme for Zola."
+repository = "https://github.com/st1020/kita"
+description = """
+* Translated from the [hugo-paper](https://github.com/nanxiaobei/hugo-paper) theme to Zola and added numerous new features.
+* Developed with TailwindCSS, featuring responsive design, support for dark mode, taxonomies, table of contents, project and archive pages, comments, LaTeX formulas, and Mermaid charts.
+* Designed with modularity in mind, making it easy to use and customize, without preset limitations, suitable for all Zola websites.
+"""
+
+# [[open_source]]
+# name = "AliceBot"
+# repository = "https://github.com/st1020/alicebot"
+# description = "简单的 Python 异步多后端机器人框架"
+
+[[education]]
+school = "Wenzhou University"
+start = 2020
+end = 2024
+degree = "Undergraduate"
+major = "Computer Science"
+content = """GPA: 4.06/5.0, Top 5% in the Major
+
+Passed CET-6 (College English Test of China, Level 6)
+
+President of the Computer Association of Wenzhou University
+"""
+
+
+[[awards]]
+name = "Third Prize in Zhejiang Provincial College Physics Competition"
+date = "2020.12"
+
+[[awards]]
+name = "School-Level Excellent Student"
+date = "2021.11"
+
+[[awards]]
+name = "First Prize in School-Level Programming Competition"
+date = "2022.03"
+
+[[awards]]
+name = "Zhejiang Provincial Government Scholarship"
+date = "2022.11"
+
+[[awards]]
+name = "School-Level Excellent Student"
+date = "2022.11"

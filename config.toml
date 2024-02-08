@@ -1,0 +1,4 @@
+base_url = "https://st1020.github.io/kita"
+
+[extra]
+default_language = "en"

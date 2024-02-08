@@ -1,0 +1,173 @@
+{% for asset in page.assets %}<!---->
+{% if asset is ending_with("data.toml") %}<!---->
+{% set_global data = load_data(path=asset, format="toml") %}<!---->
+{% endif %}<!---->
+{% endfor %}<!---->
+
+{% set section = get_section(path="_index.md") %}<!---->
+{% set_global other_locales = [] %}<!---->
+{% for other_page in section.pages %}<!---->
+{% if page != other_page %}<!---->
+{% set_global other_locales = other_locales | concat(with=other_page.slug) %}<!---->
+{% endif %}<!---->
+{% endfor %}<!---->
+
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ data.title }} | {{ data.name }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ data.title }} | {{ data.name }}" />
+    <script src="https://kit.fontawesome.com/4810f03ea3.js" crossorigin="anonymous"></script>
+    <link href="/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="mx-auto gap-6 p-6 lg:container md:flex print:flex">
+      <div class="basis-3/4">
+        <section id="bio" class="mb-8 flex">
+          <div class="grow">
+            <h2 class="mb-4 text-5xl font-black text-cyan-700">{{ data.name }}</h2>
+            <p class="text-xl">{{ data.bio }}</p>
+            <p class="font-light">{{ data.description }}</p>
+          </div>
+          <div class="text-xl print:hidden">
+            {% for locale in other_locales %}
+            <a
+              href="{{ get_url(path='/' ~ locale) }}"
+              class="p-2 uppercase duration-300 hover:rounded hover:bg-cyan-100"
+              >{{ locale }}</a
+            >
+            {% endfor %}
+          </div>
+        </section>
+        {#
+        <section id="introduction">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.introduction }}
+          </h2>
+          <div class="mb-2 rounded border border-solid border-gray-300 p-4">
+            <div>{{ data.introduction | markdown | safe }}</div>
+          </div>
+        </section>
+        #}
+        <section id="work">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.work_experience }}
+          </h2>
+          {% for job in data.work_experience %}
+          <div class="mb-2 rounded border border-solid border-gray-300 p-4">
+            <div class="mb-2 flex items-center justify-between">
+              <h2 class="text-xl font-bold">{{ job.position }}, {{ job.company }}</h2>
+              <h3 class="text-gray-400">{{ job.start }} - {{ job.end }}</h3>
+            </div>
+            <div>{{ job.content | markdown | safe }}</div>
+          </div>
+          {% endfor %}
+        </section>
+        <section id="projects">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.projects }}
+          </h2>
+          {% for project in data.projects %}
+          <div class="mb-2 rounded border border-solid border-gray-300 p-4">
+            <h2 class="text-xl font-bold">{{ project.name }} – {{ project.subtitle }}</h2>
+            <p class="mb-2">
+              <a
+                class="hover:text-cyan-700 hover:underline"
+                href="{{ project.repository }}"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i> {{ project.repository }}</a
+              >
+            </p>
+            <div>{{ project.description | markdown | safe }}</div>
+          </div>
+          {% endfor %}
+        </section>
+      </div>
+      <div class="basis-1/4">
+        <section id="contact" class="mb-6">
+          <div class="mb-4 text-xl font-light">
+            <p><i class="fa-solid fa-location-dot"></i> {{ data.location }}</p>
+            <p><i class="fa-solid fa-calendar-days"></i> {{ data.birthday }}</p>
+            <p>
+              <a
+                class="hover:text-cyan-700 hover:underline"
+                href="mailto:{{ data.email }}"
+                target="_blank"
+                ><i class="fa-solid fa-envelope"></i> {{ data.email }}</a
+              >
+            </p>
+            {% if data.phone %}
+            <p><i class="fa-solid fa-phone"></i> {{ data.phone }}</p>
+            {% endif %}
+          </div>
+          <ul>
+            {% for link in data.links %}
+            <li>
+              <a class="hover:text-cyan-700 hover:underline" href="{{ link.url }}" target="_blank"
+                ><i class="{{ link.icon }}"></i> {{ link.url }}</a
+              >
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section id="stack" class="mb-6">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.stack }}
+          </h2>
+          {% for item in data.stack %}
+          <span class="my-1 inline-block rounded bg-cyan-700 px-2 py-1 text-white">{{ item }}</span>
+          {% endfor %}
+        </section>
+        <section id="skills" class="mb-6">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.skills }}
+          </h2>
+          {% for skill in data.skills %}
+          <div class="mb-2">
+            <p>{{ skill.name }}</p>
+            <progress
+              max="100"
+              aria-labelledby="progress-id"
+              value="{{ skill.value }}"
+              class="block h-1.5 w-full"
+            ></progress>
+          </div>
+          {% endfor %}
+        </section>
+        <section id="education" class="mb-6">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.education }}
+          </h2>
+          {% for item in data.education %}
+          <h2 class="text-xl font-bold">{{ item.school }}</h2>
+          <h3 class="mb-2">{{ item.start }} - {{ item.end }}</h3>
+          <p>{{ item.major }} / {{ item.degree }}</p>
+          <div>{{ item.content | markdown | safe }}</div>
+          {% endfor %}
+        </section>
+        <section id="awards" class="mb-6">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.awards }}
+          </h2>
+          {% for award in data.awards %}
+          <div class="mb-2">
+            <p>{{ award.date }} {{ award.name }}</p>
+          </div>
+          {% endfor %}
+        </section>
+        <section id="summary" class="mb-6">
+          <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
+            {{ data.t.summary }}
+          </h2>
+          <div>{{ data.summary | markdown | safe }}</div>
+        </section>
+        <footer class="font-light text-gray-300">
+          <p>Made by Yishi Gao with Zola & TailwindCSS</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  progress {
+    @apply text-cyan-700;
+  }
+
+  progress::-webkit-progress-value {
+    @apply rounded-full bg-cyan-700;
+  }
+
+  progress::-webkit-progress-bar {
+    @apply rounded-full bg-cyan-100;
+  }
+}

@@ -1,0 +1,25 @@
+{% set_global locales = [] %}<!---->
+{% for page in section.pages %}<!---->
+{% set_global locales = locales | concat(with=page.slug) %}<!---->
+{% endfor %}<!---->
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting</title>
+    <noscript>
+      <meta http-equiv="refresh" content="1; url={{ config.extra.default_language }}/" />
+    </noscript>
+    <script>
+      const locales = JSON.parse(`{{ locales | json_encode | safe }}`);
+      const locale =
+        locales.filter((l) => navigator.language.startsWith(l))[0] ||
+        "{{ config.extra.default_language }}";
+      window.location.replace(`${locale}/${window.location.hash}`);
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

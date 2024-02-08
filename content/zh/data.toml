@@ -1,33 +1,44 @@
 title = "个人简历"
 name = "高依石 (Yishi Gao)"
 bio = "致力于成为全栈开发工程师"
-description = "正在为了成为全栈开发者而学习中，爱好并擅长 Python 和 Rust 开发；具有 Web 开发、项目开发构建部署全流程管理经验；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目。"
+description = "正在为了成为全栈开发者而学习中，爱好并擅长 Python 和 Rust 开发；具有 Web 前后端和 APP 开发经验；爱好编译原理和编译器、虚拟机、linter 等开发；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目。"
 introduction = """
-1、精通 Python 语言，熟悉 Python 语言底层运行逻辑，熟练使用 Pyhton 语言编写大型应用程序
+1、精通 Python 语言，熟悉 Python 语言底层运行逻辑，熟练使用 FastAPI、Django 等 Web 应用框架，具有使用 Pyhton 语言编写大型应用程序的经验
 
-2、熟练使用 FastAPI、Flask 等 Web 应用框架，熟悉 XPath 语法和爬虫技术
+2、爱好并熟悉掌握 Rust 语言，理解 Rust 所有权机制，有 Rust 底层程序开发经验
 
-3、爱好并熟悉掌握 Rust 语言，理解 Rust 所有权机制，有 Rust 程序开发经验
+3、理解编程语言编译运行过程，有简单的动态语言字节码编译器和虚拟机开发经验
 
-4、理解编程语言编译运行过程，有简单动态语言字节码编译器和虚拟机开发经验
+4、有一定的前端基础，了解 HTML、CSS、JS/TS 语言，Vue、React 等框架，熟悉 HTTP 和 WebSocket 协议，有 Web 前端开发经验
 
-5、有一定的前端基础，了解 HTML、CSS、JS/TS 语言，Vue、React 等框架，熟悉 HTTP 和 WebSocket 协议，有 Web 前端开发经验
+5、熟练使用 Dart 语言和 Flutter 框架进行 APP 开发
 
-6、熟悉 Linux/Unix 基本操作，有 Linux 服务器项目开发部署经验
+6、了解 Java 语言和 Spring Boot、JPA、MyBatis 等常用框架
 
-7、熟练使用 Git 等工具，熟练使用 GitHub Actions workflow 等工具进行 CI/CD
+7、了解 Linux/Unix 和 docker/kubernetes 基本操作，有基础的项目部署经验
 
-8、了解 Java 语言和 Spring Boot、JPA、MyBatis 等常用框架
+8、熟练使用 Git 等工具，熟练使用 GitHub Actions workflow 等工具进行 CI/CD
 """
 location = "浙江杭州，中国"
 phone = "(+86)15167799855"
 email = "me@gaoyishi.com"
 birthday = "2002年10月20日"
-stack = ["Python", "Rust", "FastAPI", "Flask", "TS/JS", "Vue", "React", "Java"]
-summary = "思考深入、办事认真、诚实守信；学习能力强、适应力强；对计算机编程技术有兴趣，热爱分享；在校学习期间，收获了良好的沟通能力、优秀的组织能力。"
+stack = [
+    "Python",
+    "Rust",
+    "FastAPI",
+    "Django",
+    "Flutter",
+    "TS/JS",
+    "Vue",
+    "React",
+    "Java",
+    "Go",
+]
+summary = "思考深入、办事认真；学习能力强、适应力强；对计算机编程技术有兴趣，热爱分享；在校学习和实习期间，收获了良好的沟通能力和优秀的组织能力。"
 
 [t]
-projects = "项目经历"
+projects = "开源项目"
 work_experience = "工作经历"
 skills = "技能"
 open_source = "开源项目"
@@ -60,20 +71,45 @@ name = "Rust"
 value = 90
 
 [[skills]]
+name = "Dart/Flutter"
+value = 80
+
+[[skills]]
 name = "Web Development"
 value = 75
 
 [[skills]]
-name = "Java"
-value = 75
+name = "JS/TS"
+value = 70
 
 [[skills]]
-name = "JS/TS"
+name = "Java"
 value = 65
 
 [[skills]]
 name = "Linux"
 value = 65
+
+[[skills]]
+name = "Go"
+value = 40
+
+[[work_experience]]
+company = "基调听云 - 应用安全部"
+position = "后端研发工程师（实习）"
+start = "2023.10"
+end = "至今"
+content = """
+独立负责 DongTai IAST 后端项目的开发与维护，参与听云 ASPM 项目后端的开发
+
+实现了系统的登录合规性需求和双因素组合身份认证
+
+设计实现了系统的容器健康检查及其可视化和提醒方案
+
+对接开发了多个客户定制化需求
+
+多次处理客户遇到的问题，协助技术支持解决客户的售后/售前问题
+"""
 
 [[work_experience]]
 company = "火线安全"
@@ -81,7 +117,19 @@ position = "Python 开发工程师（实习）"
 start = "2023.6"
 end = "2323.10"
 content = """
-主要负责 DongTai IAST 项目后端开发。
+参与 DongTai IAST 后端项目的开发与维护
+
+使用 Django 技术栈
+
+对后端代码进行了代码规范化重构，并进行了 CI 集成
+
+为解决商业版/开源版的差异问题，提供和实现了可读性更好的动态 Patch 解决方案
+
+实现了新版用户权限系统
+
+基于 Pandoc 和 Typst 重写了 PDF / HTML / Word 报告导出模块，以实现更加统一的导出样式和更好的可维护性
+
+基于 Tantivy 实现了新版轻量级漏洞信息搜索
 """
 
 
@@ -105,8 +153,8 @@ description = """
 * 一种受到了 Lua 和 Python 语言启发的轻量级、可嵌入的动态强类型编程语言
 * 支持过程式、面向对象、函数式、数据驱动编程
 * 具有错误处理、头等函数、匿名函数、闭包、迭代器、运算符重载、安全导航运算符、尾调用优化等现代语言特性
-* 主要面向嵌入 Rust 程序用于脚本语言用途，默认在独立的“沙盒”中运行，可以和 Rust 语言互相调用
-* 使用 Rust 语言实现了完整的词法分析、语法分析、语义分析、字节码生成和支持 GC 的基于栈的虚拟机
+* 主要面向嵌入 Rust 程序用于脚本语言用途，可以和 Rust 语言互相调用
+* 使用 Rust 语言实现了完整的词法分析、语法分析、语义分析、字节码生成和支持 GC 的基于栈的虚拟机，具有基础的类型检查支持
 """
 
 [[projects]]
@@ -127,6 +175,16 @@ repository = "https://github.com/zhlint-project/zhlint-rs"
 description = """
 * 对 Markdown 中的文本部分进行语法分析，并自动修复中英文混合排版中文本的空格、标点符号、全角/半角等规范化问题
 * zhlint 的 Rust 移植版，格式化规则和测试用例来自 zhlint 项目，但是两者的部分行为存在不同
+"""
+
+[[projects]]
+name = "Kita"
+subtitle = "一个简洁美观的 Zola 博客主题"
+repository = "https://github.com/st1020/kita"
+description = """
+* 基于 [hugo-paper](https://github.com/nanxiaobei/hugo-paper) 主题移植到 Zola 并新增许多新功能
+* 使用 TailwindCSS 编写，响应化设计，支持暗色模式、分类法、目录、项目和归档页面、评论、LaTex 公式和 Mermaid 图表
+* 模块化设计，易于使用和修改，无预设限制，适用于所有 Zola 站点
 """
 
 # [[open_source]]
