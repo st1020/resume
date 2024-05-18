@@ -19,7 +19,7 @@ introduction = """
 
 8、熟练使用 Git 等工具，熟练使用 GitHub Actions workflow 等工具进行 CI/CD
 """
-location = "浙江杭州，中国"
+location = "北京 / 杭州 / 上海"
 phone = "(+86)15167799855"
 email = "me@gaoyishi.com"
 birthday = "2002年10月20日"
@@ -111,9 +111,9 @@ content = """
 
 设计实现了系统的容器健康检查及其可视化和提醒方案
 
-对接开发了多个客户定制化需求
+对接开发了多个客户定制化需求，多次处理客户遇到的问题，解决客户的售后/售前问题
 
-多次处理客户遇到的问题，协助技术支持解决客户的售后/售前问题
+重构系统的部分架构，重写调用链上下游关联模块，大幅提高系统性能和可靠性
 """
 
 [[work_experience]]
@@ -122,9 +122,7 @@ position = "Python 开发工程师（实习）"
 start = "2023.6"
 end = "2323.10"
 content = """
-参与 DongTai IAST 后端项目的开发与维护
-
-使用 Django 技术栈
+参与 DongTai IAST 后端项目的开发与维护，使用 Django 技术栈
 
 对后端代码进行了代码规范化重构，并进行了 CI 集成
 

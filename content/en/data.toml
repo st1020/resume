@@ -23,7 +23,7 @@ introduction = """
 
 8\\. Proficient in using tools such as Git and skilled in using GitHub Actions workflows and other tools for CI/CD.
 """
-location = "Hangzhou, China"
+location = "Beijing / Hangzhou / Shanghai"
 phone = "(+86)15167799855"
 email = "me@gaoyishi.com"
 birthday = "2002-10-20"
@@ -120,9 +120,9 @@ Implemented compliance requirements for system login and two-factor combined aut
 
 Designed and implemented a container health check system with visualization and alert solutions.
 
-Collaborated on the development of various custom requirements from clients.
+Developed multiple customer customized needs, dealt with problems encountered by customers many times, and solved customer after-sales/pre-sales issues.
 
-Successfully addressed multiple issues raised by clients, providing assistance to technical support in resolving post-sales/pre-sales problems.
+Reconstruct part of the system's architecture and rewrite the upstream and downstream associated modules of the method pool to significantly improve system performance and reliability.
 """
 
 [[work_experience]]
@@ -132,7 +132,6 @@ start = "2023.6"
 end = "2323.10"
 content = """
 Participated in the development and maintenance of the DongTai IAST backend project.
-
 Using the Django technology stack.
 
 Conducted code standardization and refactoring of the backend code, integrating continuous integration (CI).
