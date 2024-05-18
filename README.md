@@ -28,7 +28,7 @@ Install dependencies
 pnpm install
 ```
 
-Build css files
+Build CSS files
 
 ```shell
 pnpm run build
@@ -42,5 +42,5 @@ pnpm run dev
 
 ## Tech
 
-- [Zola](https://www.getzola.org)
-- [TailwindCSS](https://tailwindcss.com)
+- [Zola](https://www.getzola.org/)
+- [UnoCSS](https://unocss.dev/)

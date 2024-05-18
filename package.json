@@ -4,18 +4,24 @@
   "description": "Gao Yishi's resume",
   "homepage": "https://resume.gaoyishi.com",
   "license": "MIT",
-  "author": "st1020 <stone_1020@qq.com>",
+  "author": "Yishi Gao <me@gaoyishi.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/st1020/resume.git"
   },
   "scripts": {
-    "dev": "pnpm tailwindcss -i ./static/app.css -o ./static/main.css --watch",
-    "build": "pnpm tailwindcss -i ./static/app.css -o ./static/main.css"
+    "dev": "postcss static/app.css -o static/main.css --watch",
+    "build": "postcss static/app.css -o static/main.css"
   },
-  "dependencies": {
-    "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.1"
+  "devDependencies": {
+    "@iconify-json/fa6-brands": "^1.1.19",
+    "@iconify-json/fa6-solid": "^1.1.21",
+    "@types/node": "^20.12.12",
+    "@unocss/postcss": "^0.60.2",
+    "@unocss/reset": "^0.60.2",
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "unocss": "^0.60.2"
   }
 }

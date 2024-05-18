@@ -1,3 +1,5 @@
+<!doctype html>
+
 {% for asset in page.assets %}<!---->
 {% if asset is ending_with("data.toml") %}<!---->
 {% set_global data = load_data(path=asset, format="toml") %}<!---->
@@ -12,7 +14,6 @@
 {% endif %}<!---->
 {% endfor %}<!---->
 
-<!doctype html>
 <html lang="{{ lang }}">
   <head>
     <meta charset="utf-8" />
@@ -20,13 +21,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ data.title }} | {{ data.name }}" />
-    <script src="https://kit.fontawesome.com/4810f03ea3.js" crossorigin="anonymous"></script>
     <link href="/main.css" rel="stylesheet" />
   </head>
   <body>
     <div class="mx-auto gap-6 p-6 lg:container md:flex print:flex">
-      <div class="basis-3/4">
-        <section id="bio" class="mb-8 flex">
+      <div class="flex basis-3/4 flex-col gap-4">
+        <section id="bio" class="mb-4 flex">
           <div class="grow">
             <h2 class="mb-4 text-5xl font-black text-cyan-700">{{ data.name }}</h2>
             <p class="text-xl">{{ data.bio }}</p>
@@ -56,116 +56,160 @@
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.work_experience }}
           </h2>
-          {% for job in data.work_experience %}
-          <div class="mb-2 rounded border border-solid border-gray-300 p-4">
-            <div class="mb-2 flex items-center justify-between">
-              <h2 class="text-xl font-bold">{{ job.position }}, {{ job.company }}</h2>
-              <h3 class="text-gray-400">{{ job.start }} - {{ job.end }}</h3>
+          <div class="flex flex-col gap-2">
+            {% for job in data.work_experience %}
+            <div class="rounded border border-solid border-gray-300 p-4">
+              <div class="mb-2 flex items-center justify-between">
+                <h2 class="text-xl font-bold">{{ job.position }}, {{ job.company }}</h2>
+                <h3 class="text-gray-400">{{ job.start }} - {{ job.end }}</h3>
+              </div>
+              <div>{{ job.content | markdown | safe }}</div>
             </div>
-            <div>{{ job.content | markdown | safe }}</div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </section>
         <section id="projects">
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.projects }}
           </h2>
-          {% for project in data.projects %}
-          <div class="mb-2 rounded border border-solid border-gray-300 p-4">
-            <h2 class="text-xl font-bold">{{ project.name }} – {{ project.subtitle }}</h2>
-            <p class="mb-2">
-              <a
-                class="hover:text-cyan-700 hover:underline"
-                href="{{ project.repository }}"
-                target="_blank"
-                ><i class="fa-brands fa-github"></i> {{ project.repository }}</a
-              >
-            </p>
-            <div>{{ project.description | markdown | safe }}</div>
+          <div class="flex flex-col gap-2">
+            {% for project in data.projects %}
+            <div class="rounded border border-solid border-gray-300 p-4">
+              <h2 class="text-xl font-bold">{{ project.name }} – {{ project.subtitle }}</h2>
+              <p class="mb-2">
+                <a
+                  class="mb-2 flex items-center gap-1 hover:text-cyan-700 hover:underline"
+                  href="{{ project.repository }}"
+                  target="_blank"
+                >
+                  <i class="i-fa6-brands-github"></i>
+                  {{ project.repository }}
+                </a>
+              </p>
+              <div>{{ project.description | markdown | safe }}</div>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </section>
       </div>
-      <div class="basis-1/4">
-        <section id="contact" class="mb-6">
-          <div class="mb-4 text-xl font-light">
-            <p><i class="fa-solid fa-location-dot"></i> {{ data.location }}</p>
-            <p><i class="fa-solid fa-calendar-days"></i> {{ data.birthday }}</p>
-            <p>
-              <a
-                class="hover:text-cyan-700 hover:underline"
-                href="mailto:{{ data.email }}"
-                target="_blank"
-                ><i class="fa-solid fa-envelope"></i> {{ data.email }}</a
-              >
-            </p>
+      <div class="flex basis-1/4 flex-col gap-6">
+        <section id="contact">
+          <div class="mb-4 flex flex-col text-xl font-light">
+            <div class="flex items-center gap-1">
+              <div class="i-fa6-solid-location-dot"></div>
+              <p class="grow">{{ data.location }}</p>
+            </div>
+            <div class="flex items-center gap-1">
+              <div class="i-fa6-solid-calendar-days font-bold"></div>
+              <p class="grow">{{ data.birthday }}</p>
+            </div>
+            <div class="flex items-center gap-1">
+              <div class="i-fa6-solid-envelope"></div>
+              <p class="grow">
+                <a
+                  class="hover:text-cyan-700 hover:underline"
+                  href="mailto:{{ data.email }}"
+                  target="_blank"
+                >
+                  {{ data.email }}
+                </a>
+              </p>
+            </div>
             {% if data.phone %}
-            <p><i class="fa-solid fa-phone"></i> {{ data.phone }}</p>
+            <div class="flex items-center gap-1">
+              <div class="i-fa6-solid-phone"></div>
+              <p class="grow">{{ data.phone }}</p>
+            </div>
             {% endif %}
           </div>
-          <ul>
-            {% for link in data.links %}
-            <li>
-              <a class="hover:text-cyan-700 hover:underline" href="{{ link.url }}" target="_blank"
-                ><i class="{{ link.icon }}"></i> {{ link.url }}</a
-              >
-            </li>
+          <div class="flex flex-col">
+            {% for link in data.links %}<!---->
+            {% if link.url %}
+            <a
+              class="flex items-center gap-1 hover:text-cyan-700 hover:underline"
+              href="{{ link.url }}"
+              target="_blank"
+            >
+              <i class="{{ link.icon }}"></i>{{ link.name | default(value=link.url) | safe }}
+            </a>
+            {% else %}
+            <div class="flex items-center gap-1 hover:text-cyan-700 hover:underline">
+              <i class="{{ link.icon }}"></i>{{ link.name | safe }}
+            </div>
+            {% endif %}<!---->
             {% endfor %}
-          </ul>
+          </div>
         </section>
-        <section id="stack" class="mb-6">
+        <section id="stack">
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.stack }}
           </h2>
-          {% for item in data.stack %}
-          <span class="my-1 inline-block rounded bg-cyan-700 px-2 py-1 text-white">{{ item }}</span>
-          {% endfor %}
+          <div class="flex flex-wrap gap-x-1 gap-y-2">
+            {% for item in data.stack %}
+            <span class="inline-block rounded bg-cyan-700 px-2 py-1 text-white">{{ item }}</span>
+            {% endfor %}
+          </div>
         </section>
-        <section id="skills" class="mb-6">
+        <section id="skills">
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.skills }}
           </h2>
-          {% for skill in data.skills %}
-          <div class="mb-2">
-            <p>{{ skill.name }}</p>
-            <progress
-              max="100"
-              aria-labelledby="progress-id"
-              value="{{ skill.value }}"
-              class="block h-1.5 w-full"
-            ></progress>
+          <div class="flex flex-col gap-2">
+            {% for skill in data.skills %}
+            <div>
+              <p>{{ skill.name }}</p>
+              <progress
+                max="100"
+                aria-labelledby="progress-id"
+                value="{{ skill.value }}"
+                class="block h-1.5 w-full"
+              ></progress>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </section>
-        <section id="education" class="mb-6">
+        <section id="education">
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.education }}
           </h2>
-          {% for item in data.education %}
-          <h2 class="text-xl font-bold">{{ item.school }}</h2>
-          <h3 class="mb-2">{{ item.start }} - {{ item.end }}</h3>
-          <p>{{ item.major }} / {{ item.degree }}</p>
-          <div>{{ item.content | markdown | safe }}</div>
-          {% endfor %}
+          <div class="flex flex-col gap-2">
+            {% for item in data.education %}
+            <div>
+              <h2 class="text-xl font-bold">{{ item.school }}</h2>
+              <h3 class="mb-2">{{ item.start }} - {{ item.end }}</h3>
+              <p>{{ item.major }} / {{ item.degree }}</p>
+              <div>{{ item.content | markdown | safe }}</div>
+            </div>
+            {% endfor %}
+          </div>
         </section>
-        <section id="awards" class="mb-6">
+        <section id="awards">
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.awards }}
           </h2>
-          {% for award in data.awards %}
-          <div class="mb-2">
+          <div class="flex flex-col gap-2">
+            {% for award in data.awards %}
             <p>{{ award.date }} {{ award.name }}</p>
+            {% endfor %}
           </div>
-          {% endfor %}
         </section>
-        <section id="summary" class="mb-6">
+        <section id="summary">
           <h2 class="mb-4 text-xl font-bold uppercase tracking-widest text-cyan-700">
             {{ data.t.summary }}
           </h2>
           <div>{{ data.summary | markdown | safe }}</div>
         </section>
         <footer class="font-light text-gray-300">
-          <p>Made by Yishi Gao with Zola & TailwindCSS</p>
+          <p>Made by Yishi Gao with Zola & UnoCSS</p>
+          <p>
+            <a
+              class="flex items-center gap-1"
+              href="https://github.com/st1020/resume"
+              target="_blank"
+            >
+              <i class="i-fa6-brands-github"></i> https://github.com/st1020/resume
+            </a>
+          </p>
         </footer>
       </div>
     </div>

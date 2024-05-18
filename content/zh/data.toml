@@ -51,16 +51,21 @@ awards = "获奖情况"
 
 
 [[links]]
-icon = "fa-solid fa-globe"
+icon = "i-fa6-solid-globe"
 url = "https://resume.gaoyishi.com"
 
 [[links]]
-icon = "fa-brands fa-weixin"
-url = "stone_2357"
+icon = "i-fa6-brands-weixin"
+name = "stone_2357"
 
 [[links]]
-icon = "fa-brands fa-github"
+icon = "i-fa6-brands-github"
 url = "https://github.com/st1020"
+
+[[links]]
+icon = "i-fa6-brands-linkedin"
+url = "https://www.linkedin.com/in/yishigao/"
+
 
 [[skills]]
 name = "Python"
