@@ -11,17 +11,19 @@ introduction = """
 
 2\\. Enthusiastic about and proficient in Rust programming language. Understand the ownership mechanism in Rust and have experience in low-level Rust development.
 
-3\\. Understand the compilation and execution process of programming languages. Have experience in developing simple dynamic language bytecode compilers and virtual machines.
+3\\. Understand the compilation and execution process of programming languages. Have experience in developing simple dynamic language bytecode compilers and virtual machines, and master the working principle of IAST Agent.
 
-4\\. Possess a solid foundation in frontend development, with knowledge of HTML, CSS, JS/TS languages, and familiarity with frameworks such as Vue and React. Proficient in HTTP and WebSocket protocols, with experience in web frontend development.
+4\\. Possess a solid foundation in frontend development, with knowledge of HTML, CSS, JS/TS languages, and familiarity with frameworks such as Vue and React. Proficient in HTTP and WebSocket protocols.
 
 5\\. Skilled in using Dart language and Flutter framework for APP development.
 
-6\\. Familiar with the Java language and commonly used frameworks like Spring Boot, JPA, and MyBatis.
+6\\. Familiar with the Java language and commonly used frameworks like Spring Boot and JPA.
 
 7\\. Understand basic operations in Linux/Unix and Docker/Kubernetes, with foundational experience in project deployment.
 
 8\\. Proficient in using tools such as Git and skilled in using GitHub Actions workflows and other tools for CI/CD.
+
+9\\. Experience in developing security products such as IAST, SCA, ASPM, etc.
 """
 location = "Beijing / Hangzhou / Shanghai"
 phone = "(+86)15167799855"
@@ -38,6 +40,9 @@ stack = [
     "React",
     "Java",
     "Go",
+    "Dart",
+    "MySQL",
+    "Linux",
 ]
 summary = """Thoughtful and detail-oriented;
 approaches tasks with diligence.
@@ -113,8 +118,7 @@ position = "Backend Development Engineer (Intern)"
 start = "2023.10"
 end = "Now"
 content = """
-Independently responsible for the development and maintenance of the DongTai IAST backend.
-Involved in backend development for the Tingyun ASPM project.
+Independently responsible for the development and maintenance of the DongTai IAST backend project (Python), maintenance of SCA crawler and backend (Go), and participated in the development of the backend of Tingyun ASPM project (Java).
 
 Implemented compliance requirements for system login and two-factor combined authentication.
 
@@ -132,7 +136,7 @@ start = "2023.6"
 end = "2323.10"
 content = """
 Participated in the development and maintenance of the DongTai IAST backend project.
-Using the Django technology stack.
+Using the Django / Celery technology stack.
 
 Conducted code standardization and refactoring of the backend code, integrating continuous integration (CI).
 
@@ -181,7 +185,7 @@ description = """
 * Utilized for API documentation generation in the AliceBot project: https://docs.alicebot.dev/api/.
 """
 
-[[projects]]
+[[other_projects]]
 name = "zhlint-rs"
 subtitle = "A linter/formatter tool for Chinese text content."
 repository = "https://github.com/zhlint-project/zhlint-rs"
@@ -190,7 +194,7 @@ description = """
 * A Rust port of zhlint, utilizing formatting rules and test cases from the zhlint project. However, there are some differences in behavior between the two.
 """
 
-[[projects]]
+[[other_projects]]
 name = "Kita"
 subtitle = "A clean, elegant and simple blog theme for Zola."
 repository = "https://github.com/st1020/kita"
