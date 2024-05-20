@@ -204,7 +204,7 @@ description = """
 school = "温州大学"
 start = 2020
 end = 2024
-degree = "本科在读"
+degree = "本科"
 major = "计算机科学与技术"
 content = """绩点: 4.06/5.0, 专业前 5%
 

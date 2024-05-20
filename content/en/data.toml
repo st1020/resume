@@ -213,7 +213,7 @@ description = """
 school = "Wenzhou University"
 start = 2020
 end = 2024
-degree = "Undergraduate"
+degree = "Bachelor"
 major = "Computer Science"
 content = """GPA: 4.06/5.0, Top 5% in the Major
 
