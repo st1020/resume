@@ -30,7 +30,7 @@
           <div class="grow">
             <h2 class="mb-4 text-5xl font-black text-cyan-700">{{ data.name }}</h2>
             <p class="text-xl">{{ data.bio }}</p>
-            <p class="font-light">{{ data.description }}</p>
+            <p class="font-light">{{ data.description | markdown | safe }}</p>
           </div>
           <div class="text-xl print:hidden">
             {% for locale in other_locales %}

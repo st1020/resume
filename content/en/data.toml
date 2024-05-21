@@ -3,7 +3,7 @@ name = "Yishi Gao"
 bio = "Working hard to becoming a full-stack development engineer."
 description = """I am currently studying to become a full-stack developer, with a passion and proficiency in Python and Rust development.
 I have experience in both web front-end and back-end as well as app development.
-Interested in compiler theory, compiler development, virtual machines, linters, and related areas.
+Interested in compiler theory and underlying development.
 I maintain a strong emphasis on good code style and prioritize code quality.
 I have a keen interest in open-source projects and actively develop and maintain multiple open-source projects."""
 introduction = """
@@ -142,10 +142,9 @@ Conducted code standardization and refactoring of the backend code, integrating 
 
 Addressed the differences between the commercial and open-source versions by providing and implementing a more readable dynamic patch solution.
 
-Implemented the new version of the user permission system.
-
 Rewrote the PDF/HTML/Word report export module based on Pandoc and Typst to achieve a more consistent export style and better maintainability.
 
+Implemented the new version of the user permission system.
 Implemented a new lightweight vulnerability information search feature.
 """
 
@@ -160,6 +159,7 @@ description = """
 * Supports adaptation to multiple chat protocols and provides a user-friendly plugin syntax for users to implement specific chatbot functionalities.
 * Complete type annotation support, relatively comprehensive documentation, and accompanying tools. Also supports hot reloading of plugins and configuration files.
 * Multiple protocol adapters utilize the WebSocket network protocol, employing the aiohttp library for network requests, and the pydantic library for data validation.
+* Selected for the [2023-2024 Open Source Promotion Plan (OSPP) of the Institute of Software Chinese Academy of Sciences](https://summer-ospp.ac.cn/).
 """
 
 [[projects]]
