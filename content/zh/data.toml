@@ -1,7 +1,7 @@
 title = "个人简历"
 name = "高依石 (Yishi Gao)"
 bio = "致力于成为全栈开发工程师"
-description = "正在为了成为全栈开发者而学习中，爱好并擅长 Python 和 Rust 开发；具有 Web 前后端和 APP 开发经验；爱好编译原理和底层开发；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目。[OSPP](https://summer-ospp.ac.cn/) 2023-2024 导师。"
+description = "正在为了成为全栈开发者而学习中，爱好并擅长 Python 和 Rust 开发；具有 Web 前后端和 APP 开发经验；爱好编译原理和底层开发；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目，[OSPP](https://summer-ospp.ac.cn/) 2023-2024 导师。"
 introduction = """
 1、精通 Python 语言，熟悉 Python 语言底层运行逻辑，熟练使用 FastAPI、Django 等 Web 应用框架，有使用 Pyhton 语言编写大型应用程序的经验
 
