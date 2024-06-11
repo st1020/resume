@@ -116,7 +116,7 @@ value = 40
 company = "Networkbench Tingyun - Application Security Department"
 position = "Backend Development Engineer (Intern)"
 start = "2023.10"
-end = "Now"
+end = "2024.6"
 content = """
 Independently responsible for the development and maintenance of the DongTai IAST backend project (Python), maintenance of SCA crawler and backend (Go), and participated in the development of the backend of Tingyun ASPM project (Java).
 
@@ -133,7 +133,7 @@ Reconstruct part of the system's architecture and rewrite the upstream and downs
 company = "HuoXian Security (HXSecurity)"
 position = "Python Development Engineer (Intern)"
 start = "2023.6"
-end = "2323.10"
+end = "2023.10"
 content = """
 Participated in the development and maintenance of the DongTai IAST backend project.
 Using the Django / Celery technology stack.

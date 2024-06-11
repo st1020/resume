@@ -108,7 +108,7 @@ value = 40
 company = "基调听云 - 应用安全部"
 position = "后端研发工程师（实习）"
 start = "2023.10"
-end = "至今"
+end = "2024.6"
 content = """
 独立负责 DongTai IAST 后端项目 (Python) 的开发与维护、SCA 爬虫及后端 (Go) 的维护，参与听云 ASPM 项目后端 (Java) 的开发
 
@@ -125,7 +125,7 @@ content = """
 company = "火线安全"
 position = "Python 开发工程师（实习）"
 start = "2023.6"
-end = "2323.10"
+end = "2023.10"
 content = """
 参与 DongTai IAST 后端项目的开发与维护，使用 Django / Celery 技术栈
 
