@@ -105,6 +105,15 @@ name = "Go"
 value = 40
 
 [[work_experience]]
+company = "九维数据 (Bees360)"
+position = "Python 后端开发工程师"
+start = "2024.6"
+end = "至今"
+content = """
+负责开发公司内部 AI 相关基础设施。
+"""
+
+[[work_experience]]
 company = "基调听云 - 应用安全部"
 position = "后端研发工程师（实习）"
 start = "2023.10"

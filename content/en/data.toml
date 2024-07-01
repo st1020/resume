@@ -113,6 +113,15 @@ name = "Go"
 value = 40
 
 [[work_experience]]
+company = "Bees360"
+position = "Python Backend Development Engineer"
+start = "2024.6"
+end = "Now"
+content = """
+Developing the company's internal AI-related infrastructure.
+"""
+
+[[work_experience]]
 company = "Networkbench Tingyun - Application Security Department"
 position = "Backend Development Engineer (Intern)"
 start = "2023.10"
