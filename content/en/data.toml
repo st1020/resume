@@ -21,11 +21,9 @@ introduction = """
 
 7\\. Understand basic operations in Linux/Unix and Docker/Kubernetes, with foundational experience in project deployment.
 
-8\\. Proficient in using tools such as Git and skilled in using GitHub Actions workflows and other tools for CI/CD.
-
-9\\. Experience in developing security products such as IAST, SCA, ASPM, etc.
+8\\. Proficient in using tools such as Git and skilled in using tools such as GitHub Actions workflows and GitLab pipeline for CI/CD.
 """
-location = "Beijing / Hangzhou / Shanghai"
+location = "Hangzhou / Shanghai / Shenzhen"
 phone = "(+86)15167799855"
 email = "me@gaoyishi.com"
 birthday = "2002-10-20"
@@ -44,17 +42,11 @@ stack = [
     "MySQL",
     "Linux",
 ]
-summary = """Thoughtful and detail-oriented;
-approaches tasks with diligence.
-Exhibits strong learning capabilities and adaptability.
-Passionate about computer programming technology and enjoys sharing knowledge.
-Has cultivated excellent communication and organizational skills through academic studies and internship experiences."""
 
 [t]
 projects = "Open Source Projects"
 work_experience = "Work Experience"
 skills = "Skills"
-open_source = "OSS Projects"
 stack = "Stack"
 honors = "Honors"
 education = "Education"
@@ -119,6 +111,10 @@ start = "2024.6"
 end = "Now"
 content = """
 Developing the company's internal AI-related infrastructure.
+
+Independently responsible for the development of the backend of the company's internal image annotation platform, and completed the technical design and implementation of several major version requirements.
+
+Independently responsible for the maintenance and development of the company's internal AI model inference and management platform.
 """
 
 [[work_experience]]
@@ -183,7 +179,7 @@ description = """
 * Implemented in Rust, featuring a complete set of lexer, parser, semantic analysier, code generator, and a stack-based virtual machine with garbage collection support. Includes foundational type-checking support.
 """
 
-[[projects]]
+[[other_projects]]
 name = "Sophia-doc"
 subtitle = "A python package to automatically generate API documents for Python modules"
 repository = "https://github.com/st1020/sophia-doc"
@@ -194,14 +190,14 @@ description = """
 * Utilized for API documentation generation in the AliceBot project: https://docs.alicebot.dev/api/.
 """
 
-[[other_projects]]
-name = "zhlint-rs"
-subtitle = "A linter/formatter tool for Chinese text content."
-repository = "https://github.com/zhlint-project/zhlint-rs"
-description = """
-* Analyzes the text parts in Markdown, automatically correcting spacing, punctuation, and full-width/half-width characters normalization issues in Chinese and English mixed typesetting.
-* A Rust port of zhlint, utilizing formatting rules and test cases from the zhlint project. However, there are some differences in behavior between the two.
-"""
+# [[other_projects]]
+# name = "zhlint-rs"
+# subtitle = "A linter/formatter tool for Chinese text content."
+# repository = "https://github.com/zhlint-project/zhlint-rs"
+# description = """
+# * Analyzes the text parts in Markdown, automatically correcting spacing, punctuation, and full-width/half-width characters normalization issues in Chinese and English mixed typesetting.
+# * A Rust port of zhlint, utilizing formatting rules and test cases from the zhlint project. However, there are some differences in behavior between the two.
+# """
 
 [[other_projects]]
 name = "Kita"
@@ -212,11 +208,6 @@ description = """
 * Developed with TailwindCSS, featuring responsive design, support for dark mode, taxonomies, table of contents, project and archive pages, comments, LaTeX formulas, and Mermaid charts.
 * Designed with modularity in mind, making it easy to use and customize, without preset limitations, suitable for all Zola websites.
 """
-
-# [[open_source]]
-# name = "AliceBot"
-# repository = "https://github.com/st1020/alicebot"
-# description = "简单的 Python 异步多后端机器人框架"
 
 [[education]]
 school = "Wenzhou University"
