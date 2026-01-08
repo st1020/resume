@@ -1,19 +1,19 @@
 title = "个人简历"
 name = "高依石 (Yishi Gao)"
 bio = "致力于成为全栈开发工程师"
-description = "正在为了成为全栈开发者而学习中，爱好并擅长 Python 和 Rust 开发；具有 Web 前后端和 APP 开发经验；爱好编译原理和底层开发；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目，[OSPP](https://summer-ospp.ac.cn/) 2023-2024 导师。"
+description = "爱好并擅长 Python 和 Rust 开发；具有 Web 前后端和 APP 开发经验；爱好编译原理和底层开发；具有良好的代码风格，注重代码质量；爱好开源，开发并维护多个开源项目，[OSPP](https://summer-ospp.ac.cn/) 2023-2024 导师。"
 introduction = """
 1、精通 Python 语言，熟悉 Python 语言底层运行逻辑，熟练使用 FastAPI、Django 等 Web 应用框架，有使用 Python 语言编写大型应用程序的经验
 
-2、爱好并熟悉掌握 Rust 语言，理解 Rust 所有权机制，有 Rust 底层程序开发经验
+2、爱好并掌握 Rust 语言，熟悉 Rust 设计模式，有 Rust 底层程序开发经验
 
-3、理解编程语言编译运行过程，有简单的动态语言字节码编译器和虚拟机开发经验，了解 IAST Agent 工作原理
+3、理解编程语言编译和运行过程，有动态语言字节码编译器和虚拟机开发经验，了解 IAST Agent 工作原理
 
 4、有一定的前端基础，了解 HTML、CSS、JS/TS 语言，Vue、React 等框架，熟悉 HTTP 和 WebSocket 协议
 
 5、熟练使用 Dart 语言和 Flutter 框架进行 APP 开发
 
-6、了解 Java 语言和 Spring Boot、JPA 等常用框架，参与实际项目开发
+6、了解 Java 语言和 Spring Boot、JPA 等常用框架 / Go 语言和 Gin 等常用框架，参与实际项目开发
 
 7、了解 Linux/Unix 和 Docker/Kubernetes 基本操作，有基础的项目部署经验
 
@@ -84,32 +84,34 @@ name = "Web Development"
 value = 75
 
 [[skills]]
-name = "JS/TS"
+name = "Java"
 value = 70
 
 [[skills]]
-name = "Java"
+name = "Go"
+value = 70
+
+[[skills]]
+name = "JS/TS"
 value = 65
 
 [[skills]]
 name = "Linux"
 value = 65
 
-[[skills]]
-name = "Go"
-value = 40
 
 [[work_experience]]
 company = "九维数据 (Bees360)"
 position = "Python 后端开发工程师"
 start = "2024.6"
-end = "至今"
+end = "2025.12"
 content = """
-负责公司内部 AI 相关基础设施的开发
-
-独立负责公司内部图像标注平台后台的开发，完成数个大版本需求的技术设计和实现
-
-独立负责公司内部 AI 模型推理与管理平台的维护与开发
+* 负责公司内部 AI 相关基础设施的开发和维护
+* 独立负责公司内部图像标注平台 [AnnotaAI](https://annota.bees360.ai/) 后端的开发，完成数个大版本需求的技术设计和实现
+* 独立负责公司内部 AI 模型推理与管理平台的维护与开发，设计了公司内部大模型 prompt 问卷规范和 DSL
+* 设计了公司内部基于 [Windmill](https://windmill.dev/) 的任务调度系统的代码规范和开发流程
+* 设计并实现了基于大模型和第三方数据源的自动化保险报告生成流程
+* 参与 [Bees360.ai](https://bees360.ai/) 核心保险报告系统后端的开发和维护，设计并实现了统一的新版任务调度系统
 """
 
 [[work_experience]]
@@ -118,15 +120,11 @@ position = "后端研发工程师（实习）"
 start = "2023.10"
 end = "2024.6"
 content = """
-独立负责 DongTai IAST 后端项目 (Python) 的开发与维护、SCA 爬虫及后端 (Go) 的维护，参与听云 ASPM 项目后端 (Java) 的开发
-
-实现了系统的登录合规性需求和双因素组合身份认证
-
-设计实现了系统的容器健康检查及其可视化和提醒方案
-
-对接开发了多个客户定制化需求，多次处理客户遇到的问题，解决客户的售后/售前问题
-
-重构系统的部分架构，重写调用链上下游关联模块，大幅提高系统性能和可靠性
+* 独立负责 [DongTai IAST](https://dongtai.io/) 后端项目 (Python) 的开发与维护、SCA 爬虫及后端 (Go) 的维护，参与听云 ASPM 项目后端 (Java) 的开发
+* 实现了系统的登录合规性需求和双因素组合身份认证
+* 设计实现了系统的容器健康检查及其可视化和提醒方案
+* 对接开发了多个客户定制化需求，多次处理客户遇到的问题，解决客户的售后/售前问题
+* 重构系统的部分架构，重写调用链上下游关联模块，大幅提高系统性能和可靠性
 """
 
 [[work_experience]]
@@ -135,17 +133,26 @@ position = "Python 开发工程师（实习）"
 start = "2023.6"
 end = "2023.10"
 content = """
-参与 DongTai IAST 后端项目的开发与维护，使用 Django / Celery 技术栈
-
-对后端代码进行了代码规范化重构，并进行了 CI 集成
-
-为解决商业版/开源版的差异问题，提供和实现了可读性更好的动态 Patch 解决方案
-
-基于 Pandoc 和 Typst 重写了 PDF / HTML / Word 报告导出模块，以实现更加统一的导出样式和更好的可维护性
-
-实现了新版用户权限系统，基于 Tantivy 实现了新版轻量级漏洞信息搜索
+* 参与 [DongTai IAST](https://dongtai.io/) 后端项目的开发与维护，使用 Django / Celery 技术栈
+* 对后端代码进行了代码规范化重构，并进行了 CI 集成
+* 为解决商业版/开源版的差异问题，提供和实现了可读性更好的动态 Patch 解决方案
+* 基于 Pandoc 和 Typst 重写了 PDF / HTML / Word 报告导出模块，以实现更加统一的导出样式和更好的可维护性
+* 实现了新版用户权限系统，基于 Tantivy 实现了新版轻量级漏洞信息搜索
 """
 
+
+[[projects]]
+name = "Lucia-lang"
+subtitle = "受到 Lua 和 Python 启发的编程语言"
+repository = "https://github.com/st1020/lucia-lang"
+description = """
+* 一种受到了 Lua 和 Python 语言启发的轻量级、可嵌入的动态强类型编程语言，支持过程式、面向对象、函数式、数据驱动编程
+* 具有头等函数、匿名函数、闭包、迭代器、运算符重载、安全导航运算符、尾调用优化等现代语言特性
+* 支持代数效应，可实现统一的异常处理、携程、生成器等语言特性
+* 主要面向嵌入 Rust 程序用于脚本语言用途，可以很方便地与 Rust 语言互相调用
+* 使用 Rust 语言实现了完整的词法/语法分析、语义分析、IR 生成、CFG 分析和优化、字节码生成，并具有基础的静态类型检查支持
+* 实现了基于不可变数据类型的引用计数的安全的垃圾回收，基于栈的虚拟机
+"""
 
 [[projects]]
 name = "AliceBot"
@@ -157,33 +164,21 @@ description = """
 * 支持多种聊天协议适配，并提供了一套易于学习的插件语法用于用户编写插件实现聊天机器人具体功能
 * 具有完全的类型注解支持、相对完善的文档和配套工具，支持插件和配置文件热重载
 * 多个协议适配器使用了 WebSocket 网络协议，使用 aiohttp 库进行网络请求， pydantic 库进行数据验证
-* 入选 [2023-2024 届中国科学院软件研究所开源软件供应链点亮计划 (OSPP)](https://summer-ospp.ac.cn/)
+* 入选 2023 届、2024 届[中国科学院软件研究所开源软件供应链点亮计划 (OSPP)](https://summer-ospp.ac.cn/)
 """
 
 [[projects]]
-name = "Lucia-lang"
-subtitle = "受到 Lua 和 Python 启发的编程语言"
-repository = "https://github.com/st1020/lucia-lang"
-description = """
-* 一种受到了 Lua 和 Python 语言启发的轻量级、可嵌入的动态强类型编程语言
-* 支持过程式、面向对象、函数式、数据驱动编程
-* 具有错误处理、头等函数、匿名函数、闭包、迭代器、运算符重载、安全导航运算符、尾调用优化等现代语言特性
-* 主要面向嵌入 Rust 程序用于脚本语言用途，可以和 Rust 语言互相调用
-* 使用 Rust 语言实现了完整的词法分析、语法分析、语义分析、字节码生成和支持 GC 的基于栈的虚拟机，具有基础的类型检查支持
-"""
-
-[[other_projects]]
 name = "Sophia-doc"
 subtitle = "Python 模块 API 文档生成器"
 repository = "https://github.com/st1020/sophia-doc"
 description = """
 * 分析 Python 模块的 Docstring 并自动生成 Markdown 格式的 API 文档
 * 基于 [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) 和 [PEP 484 – Type Hints](https://peps.python.org/pep-0484/) 标准
-* 支持分析 Python 函数或类的的类型注解
+* 支持基于 Python 的魔法属性分析 Python 函数或类的的 Docstring 和类型注解
 * 用于 AliceBot 项目的 API 文档生成: https://docs.alicebot.dev/api/
 """
 
-# [[other_projects]]
+# [[projects]]
 # name = "zhlint-rs"
 # subtitle = "中文内容格式化工具"
 # repository = "https://github.com/zhlint-project/zhlint-rs"
@@ -192,14 +187,15 @@ description = """
 # * zhlint 的 Rust 移植版，格式化规则和测试用例来自 zhlint 项目，但是两者的部分行为存在不同
 # """
 
-[[other_projects]]
+[[projects]]
 name = "Kita"
 subtitle = "一个简洁美观的 Zola 博客主题"
 repository = "https://github.com/st1020/kita"
 description = """
 * 基于 [hugo-paper](https://github.com/nanxiaobei/hugo-paper) 主题移植到 Zola 并新增许多新功能
-* 使用 TailwindCSS 编写，响应化设计，支持暗色模式、分类法、目录、项目和归档页面、评论、LaTex 公式和 Mermaid 图表
-* 模块化设计，易于使用和修改，无预设限制，适用于所有 Zola 站点
+* 使用 TailwindCSS，响应式设计，支持暗色模式、分类法、目录、项目和归档页面、评论、LaTex 公式和 Mermaid 图表
+* 模块化设计，适用于所有 Zola 站点，支持通过替换或注入部分修改
+* GitHub 上 Star 数量排名前 20 的 Zola 主题
 """
 
 [[education]]
@@ -217,14 +213,6 @@ content = """绩点: 4.06/5.0, 专业前 5%
 
 
 [[awards]]
-name = "浙江省大学生物理竞赛三等奖"
-date = "2020年12月"
-
-[[awards]]
-name = "校级三好学生"
-date = "2021年11月"
-
-[[awards]]
 name = "ACM 校赛一等奖"
 date = "2022年03月"
 
@@ -234,4 +222,4 @@ date = "2022年11月"
 
 [[awards]]
 name = "校级三好学生"
-date = "2022年11月"
+date = "2021年/2022年"

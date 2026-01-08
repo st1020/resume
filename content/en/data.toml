@@ -1,27 +1,23 @@
 title = "Resume"
 name = "Yishi Gao"
-bio = "Working hard to becoming a full-stack development engineer."
-description = """I am currently studying to become a full-stack developer, with a passion and proficiency in Python and Rust development.
-I have experience in both web front-end and back-end as well as app development.
-Interested in compiler theory and underlying development.
-I maintain a strong emphasis on good code style and prioritize code quality.
-I have a keen interest in open-source projects and actively develop and maintain multiple open-source projects. The mentor of China OSPP 2021-2024."""
+bio = "Working hard to becoming a full-stack development engineer"
+description = "Interested in and proficient at Python and Rust development; experienced in both front-end/back-end Web and mobile application development; interested in compiler theory and low-level systems development; maintains a strong coding style with an emphasis on code quality; passionate about open source, having developed and maintained multiple open-source projects; mentor for [OSPP](https://summer-ospp.ac.cn/) 2023–2024."
 introduction = """
-1\\. Proficient in the Python language, familiar with the underlying logic of Python, and skilled in using web application frameworks such as FastAPI and Django. Have experience in writing large-scale applications in Python.
+1\\. Proficient in Python, familiar with the internal runtime mechanisms of the language, skilled in using Web frameworks such as FastAPI and Django, with experience developing large-scale applications in Python
 
-2\\. Enthusiastic about and proficient in Rust programming language. Understand the ownership mechanism in Rust and have experience in low-level Rust development.
+2\\. Enthusiastic about and proficient in Rust, familiar with Rust design patterns, with experience in low-level systems programming using Rust
 
-3\\. Understand the compilation and execution process of programming languages. Have experience in developing simple dynamic language bytecode compilers and virtual machines, and master the working principle of IAST Agent.
+3\\. Understands the compilation and execution process of programming languages; has experience developing bytecode compilers and virtual machines for dynamic languages; familiar with the working principles of IAST agents
 
-4\\. Possess a solid foundation in frontend development, with knowledge of HTML, CSS, JS/TS languages, and familiarity with frameworks such as Vue and React. Proficient in HTTP and WebSocket protocols.
+4\\. Possesses a solid front-end foundation, familiar with HTML, CSS, JS/TS, frameworks such as Vue and React, and the HTTP and WebSocket protocols
 
-5\\. Skilled in using Dart language and Flutter framework for APP development.
+5\\. Proficient in using Dart and the Flutter framework for mobile application development
 
-6\\. Familiar with the Java language and commonly used frameworks like Spring Boot and JPA.
+6\\. Familiar with Java and common frameworks such as Spring Boot and JPA, as well as Go and frameworks such as Gin; has participated in real-world project development
 
-7\\. Understand basic operations in Linux/Unix and Docker/Kubernetes, with foundational experience in project deployment.
+7\\. Familiar with basic operations of Linux/Unix and Docker/Kubernetes, with foundational project deployment experience
 
-8\\. Proficient in using tools such as Git and skilled in using tools such as GitHub Actions workflows and GitLab pipeline for CI/CD.
+8\\. Proficient in tools such as Git, and experienced with CI/CD using GitHub Actions workflows and GitLab pipelines
 """
 location = "Hangzhou / Shanghai / Shenzhen"
 phone = "(+86)15167799855"
@@ -89,32 +85,34 @@ name = "Web Development"
 value = 75
 
 [[skills]]
-name = "JS/TS"
+name = "Java"
 value = 70
 
 [[skills]]
-name = "Java"
+name = "Go"
+value = 70
+
+[[skills]]
+name = "JS/TS"
 value = 65
 
 [[skills]]
 name = "Linux"
 value = 65
 
-[[skills]]
-name = "Go"
-value = 40
 
 [[work_experience]]
 company = "Bees360"
 position = "Python Backend Development Engineer"
 start = "2024.6"
-end = "Now"
+end = "2025.12"
 content = """
-Developing the company's internal AI-related infrastructure.
-
-Independently responsible for the development of the backend of the company's internal image annotation platform, and completed the technical design and implementation of several major version requirements.
-
-Independently responsible for the maintenance and development of the company's internal AI model inference and management platform.
+* Responsible for the development and maintenance of internal AI-related infrastructure
+* Independently led the backend development of the internal image annotation platform [AnnotaAI](https://annota.bees360.ai/), completing technical design and implementation for multiple major versions
+* Independently responsible for the maintenance and development of the internal AI model inference and management platform; designed internal large-model prompt questionnaire standards and DSL
+* Designed internal code standards and development workflows for a task scheduling system based on [Windmill](https://windmill.dev/)
+* Designed and implemented an automated insurance report generation pipeline based on large language models and third-party data sources
+* Participated in the backend development and maintenance of the core insurance reporting system at [Bees360.ai](https://bees360.ai/), designing and implementing a unified new-generation task scheduling system
 """
 
 [[work_experience]]
@@ -123,15 +121,11 @@ position = "Backend Development Engineer (Intern)"
 start = "2023.10"
 end = "2024.6"
 content = """
-Independently responsible for the development and maintenance of the DongTai IAST backend project (Python), maintenance of SCA crawler and backend (Go), and participated in the development of the backend of Tingyun ASPM project (Java).
-
-Implemented compliance requirements for system login and two-factor combined authentication.
-
-Designed and implemented a container health check system with visualization and alert solutions.
-
-Developed multiple customer customized needs, dealt with problems encountered by customers many times, and solved customer after-sales/pre-sales issues.
-
-Reconstruct part of the system's architecture and rewrite the upstream and downstream associated modules of the method pool to significantly improve system performance and reliability.
+* Independently responsible for the development and maintenance of the [DongTai IAST](https://dongtai.io/) backend project (Python), maintenance of the SCA crawler and backend (Go), and participated in backend development of the Tingyun ASPM project (Java)
+* Implemented system login compliance requirements and combined two-factor authentication
+* Designed and implemented container health checks along with visualization and alerting solutions
+* Integrated and developed multiple customer-specific requirements, repeatedly handling and resolving both pre-sales and post-sales customer issues
+* Refactored parts of the system architecture and rewrote upstream and downstream call-chain association modules, significantly improving system performance and reliability
 """
 
 [[work_experience]]
@@ -140,19 +134,26 @@ position = "Python Development Engineer (Intern)"
 start = "2023.6"
 end = "2023.10"
 content = """
-Participated in the development and maintenance of the DongTai IAST backend project.
-Using the Django / Celery technology stack.
-
-Conducted code standardization and refactoring of the backend code, integrating continuous integration (CI).
-
-Addressed the differences between the commercial and open-source versions by providing and implementing a more readable dynamic patch solution.
-
-Rewrote the PDF/HTML/Word report export module based on Pandoc and Typst to achieve a more consistent export style and better maintainability.
-
-Implemented the new version of the user permission system.
-Implemented a new lightweight vulnerability information search feature.
+* Participated in the development and maintenance of the [DongTai IAST](https://dongtai.io/) backend project using the Django / Celery technology stack
+* Refactored backend code to enforce coding standards and integrated CI
+* To address differences between commercial and open-source editions, proposed and implemented a more readable dynamic patch solution
+* Rewrote the PDF / HTML / Word report export module based on Pandoc and Typst to achieve more consistent export styles and better maintainability
+* Implemented a new user permission system and a new lightweight vulnerability information search based on Tantivy
 """
 
+
+[[projects]]
+name = "Lucia-lang"
+subtitle = "A programming language inspired by Lua and Python"
+repository = "https://github.com/st1020/lucia-lang"
+description = """
+* A lightweight, embeddable, dynamically strong-typed programming language inspired by Lua and Python, supporting procedural, object-oriented, functional, and data-driven programming
+* Features modern language capabilities such as first-class functions, anonymous functions, closures, iterators, operator overloading, safe navigation operators, and tail-call optimization
+* Supports algebraic effects, enabling unified implementations of language features such as exception handling, coroutines, and generators
+* Primarily designed for embedding into Rust programs as a scripting language, enabling seamless interoperation with Rust
+* Implemented a complete pipeline in Rust including lexical/syntax analysis, semantic analysis, IR generation, CFG analysis and optimization, bytecode generation, with basic static type checking support
+* Implemented a safe garbage collection mechanism based on reference counting over immutable data types, and a stack-based virtual machine
+"""
 
 [[projects]]
 name = "AliceBot"
@@ -160,62 +161,51 @@ subtitle = "Python asynchronous multi-backend chatbot framework"
 repository = "https://github.com/AliceBotProject/alicebot"
 # stack = ["Python", "AsyncIO", "aithttp", "pydantic"]
 description = """
-* A chatbot framework using Python coroutines, exhibiting high execution efficiency.
-* Supports adaptation to multiple chat protocols and provides a user-friendly plugin syntax for users to implement specific chatbot functionalities.
-* Complete type annotation support, relatively comprehensive documentation, and accompanying tools. Also supports hot reloading of plugins and configuration files.
-* Multiple protocol adapters utilize the WebSocket network protocol, employing the aiohttp library for network requests, and the pydantic library for data validation.
-* Selected for the [2023-2024 Open Source Promotion Plan (OSPP) of the Institute of Software Chinese Academy of Sciences](https://summer-ospp.ac.cn/).
+* A chatbot framework written using Python coroutines, delivering high execution efficiency
+* Supports multiple chat protocol adapters and provides an easy-to-learn plugin syntax for users to implement chatbot functionality
+* Offers full type annotation support, comprehensive documentation, and supporting tools; supports hot reloading of plugins and configuration files
+* Multiple protocol adapters use the WebSocket protocol; network requests are handled with the aiohttp library, and data validation is performed using the pydantic library
+* Selected for the 2023 and 2024 cohorts of the [Open Source Software Supply Chain Lighting Program (OSPP), Institute of Software, Chinese Academy of Sciences](https://summer-ospp.ac.cn/)
 """
 
 [[projects]]
-name = "Lucia-lang"
-subtitle = "A programming language inspired by Lua and Python"
-repository = "https://github.com/st1020/lucia-lang"
-description = """
-* A lightweight, embeddable, dynamically-typed programming language inspired by Lua and Python.
-* Supports procedural, object-oriented, functional, and data-driven programming paradigms.
-* Incorporates modern language features such as error handling, first-class functions, anonymous functions, closures, iterators, operator overloading, safe navigation operators, and tail call optimization.
-* Primarily designed for embedding in Rust programs for scripting purposes, and allows mutual calls with Rust.
-* Implemented in Rust, featuring a complete set of lexer, parser, semantic analysier, code generator, and a stack-based virtual machine with garbage collection support. Includes foundational type-checking support.
-"""
-
-[[other_projects]]
 name = "Sophia-doc"
-subtitle = "A python package to automatically generate API documents for Python modules"
+subtitle = "A Python module API documentation generator"
 repository = "https://github.com/st1020/sophia-doc"
 description = """
-* Analyzes Docstrings of Python modules and automatically generates API documentation in Markdown format.
-* Based on [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) and [PEP 484 – Type Hints](https://peps.python.org/pep-0484/).
-* Supports the analysis of type annotations for Python functions or classes.
-* Utilized for API documentation generation in the AliceBot project: https://docs.alicebot.dev/api/.
+* Analyzes Python module docstrings and automatically generates API documentation in Markdown format
+* Based on the standards of [PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/) and [PEP 484 – Type Hints](https://peps.python.org/pep-0484/)
+* Supports analyzing docstrings and type annotations of Python functions or classes via Python magic attributes
+* Used for API documentation generation in the AliceBot project: https://docs.alicebot.dev/api/
 """
 
-# [[other_projects]]
+# [[projects]]
 # name = "zhlint-rs"
-# subtitle = "A linter/formatter tool for Chinese text content."
+# subtitle = "A linter/formatter tool for Chinese text content"
 # repository = "https://github.com/zhlint-project/zhlint-rs"
 # description = """
-# * Analyzes the text parts in Markdown, automatically correcting spacing, punctuation, and full-width/half-width characters normalization issues in Chinese and English mixed typesetting.
-# * A Rust port of zhlint, utilizing formatting rules and test cases from the zhlint project. However, there are some differences in behavior between the two.
+# * Performs syntactic analysis on text sections in Markdown and automatically fixes formatting issues such as spacing, punctuation, and full-width/half-width characters in mixed Chinese–English content
+# * A Rust port of zhlint; formatting rules and test cases are derived from the zhlint project, though some behaviors differ
 # """
 
-[[other_projects]]
+[[projects]]
 name = "Kita"
 subtitle = "A clean, elegant and simple blog theme for Zola."
 repository = "https://github.com/st1020/kita"
 description = """
-* Translated from the [hugo-paper](https://github.com/nanxiaobei/hugo-paper) theme to Zola and added numerous new features.
-* Developed with TailwindCSS, featuring responsive design, support for dark mode, taxonomies, table of contents, project and archive pages, comments, LaTeX formulas, and Mermaid charts.
-* Designed with modularity in mind, making it easy to use and customize, without preset limitations, suitable for all Zola websites.
+* Ported from the [hugo-paper](https://github.com/nanxiaobei/hugo-paper) theme to Zola, with many new features added
+* Built with TailwindCSS and responsive design; supports dark mode, taxonomies, table of contents, projects and archive pages, comments, LaTeX formulas, and Mermaid diagrams
+* Modular design suitable for all Zola sites, supporting customization through replacement or injection
+* Ranked among the top 20 Zola themes by number of GitHub stars
 """
 
 [[education]]
 school = "Wenzhou University"
 start = 2020
 end = 2024
-degree = "Bachelor"
+degree = "Bachelor of Engineering"
 major = "Computer Science"
-content = """GPA: 4.06/5.0, Top 5% in the Major
+content = """GPA: 4.06/5.0, Top 5% of the major
 
 Passed CET-6 (College English Test of China, Level 6)
 
@@ -224,21 +214,13 @@ President of the Computer Association of Wenzhou University
 
 
 [[awards]]
-name = "Third Prize in Zhejiang Provincial College Physics Competition"
-date = "2020.12"
-
-[[awards]]
-name = "School-Level Excellent Student"
-date = "2021.11"
-
-[[awards]]
-name = "First Prize in School-Level Programming Competition"
-date = "2022.03"
+name = "First Prize in University-Level Programming Competition"
+date = "March 2022"
 
 [[awards]]
 name = "Zhejiang Provincial Government Scholarship"
-date = "2022.11"
+date = "November 2022"
 
 [[awards]]
-name = "School-Level Excellent Student"
-date = "2022.11"
+name = "University-Level Outstanding Student"
+date = "2021 / 2022"
