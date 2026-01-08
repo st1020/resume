@@ -514,9 +514,12 @@ progress::-moz-progress-bar {
 .duration-300{--un-duration:300ms;transition-duration:300ms;}
 .items-center{align-items:center;}
 .justify-between{justify-content:space-between;}
+.static{position:static;}
 .table{display:table;}
 @media print{
+.print\:mx-0{margin-inline:calc(var(--spacing) * 0);}
 .print\:flex{display:flex;}
+.print\:max-w-full{max-width:100%;}
 .print\:hidden{display:none;}
 }
 @supports (color: color-mix(in lab, red, red)){

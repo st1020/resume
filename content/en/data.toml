@@ -35,7 +35,7 @@ stack = [
     "Java",
     "Go",
     "Dart",
-    "MySQL",
+    "PostgreSQL",
     "Linux",
 ]
 
